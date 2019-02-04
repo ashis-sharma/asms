@@ -1,0 +1,43 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> Send Email</h1>
+      <% include ./partials/messages %>
+      <form action="/users/email" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="email">To</label>
+          <input
+            type="text"
+            id="to"
+            name="to"
+            class="form-control"
+            placeholder="Enter Reciever Email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            class="form-control"
+            placeholder="Enter Subject"/>
+        </div>
+        <div class="form-group">
+          <label for="password">Body</label>
+          <textarea class="form-control" name="body" id="body" rows="10" placeholder="Enter Message Here"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <img class="rounded mx-auto d-block" src="/captcha"/>
+          <br>
+           <input type="text" name="captcha" class="form-control"/>
+          <br>
+          <div>
+          <div class="text-center"> 
+            <button type="submit" class="btn btn-primary center-block">Send</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

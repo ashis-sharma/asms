@@ -1,0 +1,30 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>Send Message</h1>
+      <% include ./partials/messages %>
+      <form action="/users/message" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="email">Reciver No</label>
+          <input
+            type="text"
+            id="to"
+            name="to"
+            class="form-control"
+            placeholder="Enter Reciever No"/>
+        </div>
+        <div class="form-group">
+          <label for="password">Message</label>
+          <textarea class="form-control" name="text" id="messages" rows="3" placeholder="Enter Message Here"></textarea>
+        </div>
+        <div class="form-group">
+        <img class="rounded mx-auto d-block" src="/captcha"/>
+        <br>
+        <input type="text" name="captcha" class="form-control"/>
+        <br>
+        <div class="text-center"> 
+        <button type="submit" class="btn btn-primary center-block">Send</button>
+      </form>
+    </div>
+  </div>
+</div>

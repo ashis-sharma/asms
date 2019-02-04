@@ -1,0 +1,40 @@
+a{
+  font-size:18px;
+  font-family: 'Thasadith', sans-serif;
+}
+.navbar-brand{
+  font-size:30px;
+  font-family: 'Major Mono Display', monospace;
+}
+body{
+  font-family: 'Karla', sans-serif;
+  font-size:15px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.terms{
+  font-size:18px;
+  color:black;
+}
+.mycustom{
+  position: relative;
+}
+.mycustom input[type=text] {
+width: 100%;
+padding-right: 123px;
+}
+.mycustom .input-group-prepend {
+position: absolute;
+right: 4px;
+top: 4px;
+}

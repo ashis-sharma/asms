@@ -1,0 +1,98 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i> Register</h1>
+      <% include ./partials/messages %>
+      <form action="/users/registration" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+        </div>
+   <label for="Email">Email</label>
+        <div class="form-group mycustom">
+        <input 
+          type="email" 
+          class="form-control" 
+          name="email" 
+          id="email"
+          placeholder="Enter Email ID"
+          value="<%= typeof phone != 'undefined' ? phone : '' %>"/>
+          <div class="input-group-prepend">
+            <button class="btn btn-primary btn-sm rounded-0" id="ajax_email_otp">Send OTP</button>
+          </div>
+          <small 
+            class="form-text text-muted">Please Verify Your Email before submission.
+            </small>
+        </div>
+        <div class="form-group" id="send_email_otp">
+        <label for="OTP">Enter Email One Time Password</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          name="email_otp" 
+          id="email_otp"
+          placeholder="Enter Email One Time Password"
+          maxlength="6"
+          value="<%= typeof number != 'undefined' ? number : '' %>"/>
+          <small 
+            class="form-text text-muted">Please Enter OTP which is recieved just now on your Email.
+            </small>
+        </div>
+        <label for="Phone">Mobile No</label>
+        <div class="form-group mycustom">
+        <input 
+          type="text" 
+          class="form-control" 
+          name="phone" 
+          id="phone"
+          placeholder="Enter Mobile No"
+          maxlength="10"
+          value="<%= typeof phone != 'undefined' ? phone : '' %>"/>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Create Password"
+            value="<%= typeof email != 'undefined' ? password : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+            value="<%= typeof email != 'undefined' ? password2 : '' %>"
+          />
+        </div>
+        <div class="form-group">
+        <img class="rounded mx-auto d-block" src="/captcha"/>
+        <br>
+        <input type="text" name="captcha" class="form-control"/>
+        <br>
+        <div>
+        <div class="form-group">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="checkbox">
+            <label class="custom-control-label" for="checkbox"><a class="terms" href="/users/termsandcondition">Terms and Condition</a></label>
+          </div>
+          <div class="text-center">
+        <button type="submit" class="btn btn-primary center-block">Register</button>
+        </div>
+      </form>
+      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+    </div>
+  </div>
+</div>
