@@ -1,4 +1,4 @@
 module.exports={
-    id:'noreplyasms@gmail.com',
-    password:'Asms@123'
+    id:'yourEmail',
+    password:'yourPassword'
 }
